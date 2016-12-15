@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<style type="text/css">
+    *{
+        margin: 0;
+        padding: 0;
+    }
+    canvas{
+        /*border:1px solid black;*/
+    }
+</style>
+<body>
+
+
+
+<!--阳光部分-->
+<canvas width="620" height="370" id="sunShine" style="position: absolute;top:0px;z-index: 101;"></canvas>
+<canvas width="620" height="500" id="sunShine1" style="position: absolute;z-index: 110;"></canvas>
+<img src="img/SunBack.png" id="sunBack" style="display: none" />
+<img src="img/Sun.gif" id="sun" style="display: none" />
+<img src="img/Button.png" id="jiFenBan" style="display: none" />
+
+<canvas width="465" height="555" id="GameoverT" style="position: absolute;z-index: 110;left:75px;display: none"></canvas>
+<img src="img/SeedChooser_Background.png" id="tankuang" style="display: none" />
+<img src="img/ZombiesWon.png" id="GameOver" style="display: none" /><!--僵尸吃掉了你的脑子！！！-->
+
+<!--地图部分-->
+<canvas width="620" height="308" id="ditu" style="position: absolute;top:62px;z-index:99;background-color:rgba(0, 172, 0, 0.32);background-image: url('img/sod1row.png')"></canvas>
+
+<!--植物选择部分-->
+<canvas width="100" height="368" id="plantsChoose" style="position: absolute;left:620px;z-index: 100;border:1px solid #ace3a1;"></canvas>
+            <!-- 豌豆射手卡片 -->
+<img src="img/plants/cards/Peashooter.png" id="peasCard" style="display: none" />
+            <!-- 坚果墙卡片 -->
+<img src="img/plants/cards/WallNut.png" id="nutCard" style="display: none" />
+            <!-- 坚果墙卡片 -->
+<img src="img/plants/cards/SunFlower.png" id="sunFlowerCard" style="display: none" />
+
+
+<!--植物子弹部分-->
+<canvas width="620" height="500" id="plantsBoom" style="position: absolute;z-index: 101"></canvas>
+
+
+<!--植物部分-->
+<canvas width="620" height="500" id="plants" style="position: absolute;z-index: 100"></canvas>
+            <!--豌豆射手-->
+<img src="img/plants/Peashooter.gif" id="Peashooter" style="display: none" />
+            <!--豌豆射手子弹-->
+<img src="img/plants/PB00.gif" id="Peashooter_boom" style="display: none" />
+            <!-- 坚果墙 -->
+<img src="img/plants/WallNut.gif" id="wallNut" style="display: none" />
+            <!-- 坚果墙 -->
+<img src="img/plants/Sunflower.gif" id="sunflower" style="display: none" />
+
+<!--僵尸部分-->
+<canvas width="620" height="500" id="zombies" style="position: absolute;z-index: 102"></canvas>
+<img src="img/Zombies/zombs4.png" id="zombie4" style="display: none" />
+<img src="img/Zombies/zombies4_eat.png" id="zombie4_eat" style="display: none" />
+<img src="img/Zombies/zombies1.png" id="zombie1" style="display: none" />
+<img src="img/Zombies/zombies3.png" id="zombie3" style="display: none" />
+
+<div id="Zcomming"></div>
+<div id="shootBoom"></div>
+<div id="getSun"></div>
+<!--<audio src="sound/UltimateBattle.mp3" controls="controls" autoplay="autoplay" loop="loop" style="display: none"></audio>-->
+
+
+
+<script type="text/javascript" src="js/zombies.js" charset="utf-8"></script>
+<script type="text/javascript" src="js/ditu.js" charset="utf-8"></script>
+<script type="text/javascript" src="js/dropSunshine.js" charset="utf-8"></script>
+<script type="text/javascript" src="js/plantsChoose.js" charset="utf-8"></script>
+<script type="text/javascript" src="js/GameOver.js" charset="utf-8"></script>
+
+
+</body>
+</html>
